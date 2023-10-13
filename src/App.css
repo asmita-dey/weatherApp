@@ -1,0 +1,137 @@
+*{ 
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+body{
+  background: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex-wrap: wrap;
+  width:100vw;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+  width: 20vw;
+  height: 40vh;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 3rem rgba(255, 255, 255, 0.2);
+  background:#ffffff;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0,0,0);
+  min-width: 20rem;
+  min-height: 25rem;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+}
+input{
+  margin: 1rem;
+  padding: 0.5rem;
+  
+}
+.wave-one,.wave-three,.wave-two{
+  position: absolute;
+  top: 180%;
+  background: white;
+  width: 30rem;
+  height: 30rem;
+  margin-left: -25rem;
+  margin-top:-25rem;
+  transform-origin: 50% 48%;
+  border-radius:43%;
+}
+.wave-one{
+  left:90%;
+  opacity: 0.3;
+  animation: drift 3000ms infinite linear;
+  z-index:1;
+}
+.wave-three{
+  right:-30%;
+  animation: drift 5000ms infinite linear;
+  z-index:2 !important;
+  opacity: 0.2;
+}
+.wave-two{
+  left:90%;
+  animation: drift 7000ms infinite linear;
+  z-index:3 !important;
+  opacity: 0.2;
+}
+
+@keyframes drift {
+  from{
+    transform: rotate(0deg);
+  }
+  from{
+    transform: rotate(360deg);
+  }
+}
+
+.fa-street-view{
+  animation: rotates 3s linear infinite alternate;
+}
+#date{
+  text-align: center;
+  margin-top:0.5rem;
+  color: #5b6677;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.tempmin_max{
+  text-align: center;
+  margin-top:0.5rem;
+  font-weight:300;
+  font-size:1.2rem;
+  color:#2b313a;
+  justify-content: center;
+}
+.temp{
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.fa-solid{
+  height:55%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+}
+input{
+  font-size: 15.5px;
+  border-radius: 10px;
+  width: 85%;
+  align-content: center;
+}
+@keyframes rotates {
+  from{
+    transform: translate(-0.5rem);
+  }
+  to{
+    transform: translate(0.5rem);
+  }
+}
+.info{
+  bottom: 0;
+  width: 100%;
+  height: 45%;
+}
+.location{
+  margin-top: 0rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+}
+h2{
+  text-align: center;
+}
